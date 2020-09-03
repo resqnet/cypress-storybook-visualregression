@@ -7,17 +7,23 @@ import './button.css';
  */
 export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const [buttonLabel, setLabel] = React.useState(label);
+  const onClick = () => { setLabel("hoge"); }
+
   return (
     <button
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={backgroundColor && { backgroundColor }}
+      data-testid="button"
       {...props}
+      onClick={onClick}
     >
-      {label}
+      {buttonLabel}
     </button>
   );
 };
+
 
 Button.propTypes = {
   /**

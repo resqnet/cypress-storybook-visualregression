@@ -16,7 +16,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "cypress:base": "cypress run --env type=base --config screenshotsFolder=cypress/snapshots/base",
+    "cypress:run": "cypress run --env type=actual",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,6 +47,7 @@
     "@testing-library/cypress": "^6.0.1",
     "babel-loader": "^8.1.0",
     "cypress": "^5.1.0",
+    "cypress-visual-regression": "^1.5.0",
     "react-is": "^16.13.1",
     "storybook": "^6.0.21"
   }

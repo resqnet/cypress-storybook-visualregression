@@ -1,1 +1,1 @@
-VisualRegression用のサンプル
+React+Cypress＋StorybookでVisualRegression用のサンプル
